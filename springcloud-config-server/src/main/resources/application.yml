@@ -8,8 +8,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/shiyuan2he/springcloud-server-config-repo
-          search-paths: repo
+          uri: https://github.com/shiyuan2he/springcloud
+          search-paths: springcloud-config-repo
           username:
           password:
       label: master

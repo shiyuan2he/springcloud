@@ -1,11 +1,12 @@
 server:
   port: 8080
-
 eureka:
   instance:
-    hostname: localhost
+    hostname: peer1
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://peer2:8090/eureka/
+spring:
+  profiles: peer1

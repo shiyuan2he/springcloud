@@ -15,6 +15,8 @@
         <module>springcloud-consumer-ribbon</module>
         <module>springcloud-consumer-feign</module>
         <module>springcloud-service-zuul</module>
+        <module>springcloud-config-server</module>
+        <module>springcloud-config-client</module>
     </modules>
 
     <groupId>com.hsy.springcloud</groupId>
@@ -58,6 +60,16 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-zuul</artifactId>
+                <version>${version.springcloud}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-config-server</artifactId>
+                <version>${version.springcloud}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-config</artifactId>
                 <version>${version.springcloud}</version>
             </dependency>
         </dependencies>

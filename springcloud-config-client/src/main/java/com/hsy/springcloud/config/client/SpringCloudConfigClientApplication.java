@@ -1,5 +1,9 @@
 package com.hsy.springcloud.config.client;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 /**
  * @author heshiyuan
  * @description <p></p>
@@ -10,5 +14,10 @@ package com.hsy.springcloud.config.client;
  * Copyright (c) 2017 shiyuan4work@sina.com All rights reserved.
  * @price ¥5    微信：hewei1109
  */
+@SpringBootApplication
+@EnableDiscoveryClient
 public class SpringCloudConfigClientApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringCloudConfigClientApplication.class,args) ;
+    }
 }

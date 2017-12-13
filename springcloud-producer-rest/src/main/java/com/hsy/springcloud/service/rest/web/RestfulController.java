@@ -25,11 +25,11 @@ public class RestfulController {
 
     @Value("${server.port}")
     String port ;
+    @Value("${spring.application.name}")
+    String name ;
 
     @GetMapping(value = "/info")
     public String getInfo(){
-        return "I am info from port("+port+")" ;
+        return "I am info from port("+port+") from application name("+name+")" ;
     }
-
-
 }

@@ -18,12 +18,19 @@ import org.springframework.web.bind.annotation.RestController;
  * @price ¥5    微信：hewei1109
  */
 @RestController
+@RequestMapping("/api/rest")
 public class RestfulController {
+
+    @Autowired private RestfulServiceImpl restfulService ;
+
     @Value("${server.port}")
     String port ;
-    @Autowired private RestfulServiceImpl restfulService ;
+    @Value("${spring.application.name}")
+    String name ;
+
     @RequestMapping("/home")
-    public String home(@RequestParam String name){
-        return restfulService.getRestData(name);
+    public String home(){
+        return "I am info from port("+port+") from application name("+name+") invoke other service." + "\n"
+                +restfulService.getRestData(name);
     }
 }

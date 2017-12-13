@@ -1,12 +1,13 @@
 server:
   port: 8080
+
 eureka:
   instance:
     hostname: peer1
   client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
+    serviceUrl:
       defaultZone: http://peer2:8090/eureka/
 spring:
-  profiles: peer1
+  application:
+    name: springcloud-eureka-server
+

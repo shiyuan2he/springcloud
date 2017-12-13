@@ -10,8 +10,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>springcloud-eureka-server</module>
-        <module>springcloud-eureka-service-rest</module>
+        <module>springcloud-server-eureka</module>
+        <module>springcloud-producer-rest</module>
         <module>springcloud-consumer-ribbon</module>
         <module>springcloud-consumer-feign</module>
         <module>springcloud-service-zuul</module>
@@ -19,7 +19,6 @@
         <module>springcloud-config-client</module>
         <module>springcloud-config-repo</module>
         <module>springcloud-zipkin-server</module>
-        <module>springcloud-service-rest</module>
         <module>springcloud-service-data</module>
     </modules>
 

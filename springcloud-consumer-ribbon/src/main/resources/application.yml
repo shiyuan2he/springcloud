@@ -1,9 +1,9 @@
 server:
-  port: 8070
+  port: 8002
 spring:
   application:
     name: springcloud-consumer-ribbon
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://peer1:8080/eureka/

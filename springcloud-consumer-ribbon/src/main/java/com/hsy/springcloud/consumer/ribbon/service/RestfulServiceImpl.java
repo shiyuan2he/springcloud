@@ -22,7 +22,7 @@ public class RestfulServiceImpl {
 
     @HystrixCommand(fallbackMethod = "hiError")
     public String getRestData(String name){
-        return restTemplate.getForObject("http://springcloud-eureka-client/api/rest/message?name="+name,String.class) ;
+        return restTemplate.getForObject("http://springcloud-producer-rest/api/rest/info",String.class) ;
     }
 
     public String hiError(String name) {

@@ -31,6 +31,6 @@ public class RestfulController {
     @RequestMapping("/home")
     public String home(){
         return "I am info from port("+port+") from application name("+name+") invoke other service." + "\n"
-                +restfulService.getRestData(name);
+                +restfulService.getRestData();
     }
 }

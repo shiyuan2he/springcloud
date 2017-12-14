@@ -1,9 +1,7 @@
-package com.hsy.springcloud.server.config;
+package com.hsy.springcloud.config.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * @author heshiyuan
@@ -16,10 +14,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @price ¥5    微信：hewei1109
  */
 @SpringBootApplication
-@EnableConfigServer
-@EnableDiscoveryClient
-public class SpringCloudConfigServerApplication {
+//@EnableDiscoveryClient
+public class SpringCloudServiceConfigApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudConfigServerApplication.class,args) ;
+        SpringApplication.run(SpringCloudServiceConfigApplication.class,args) ;
     }
 }

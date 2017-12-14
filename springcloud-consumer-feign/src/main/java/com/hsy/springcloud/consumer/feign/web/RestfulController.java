@@ -3,6 +3,7 @@ package com.hsy.springcloud.consumer.feign.web;
 import com.hsy.springcloud.consumer.feign.service.ISchedualRestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,11 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @price ¥5    微信：hewei1109
  */
 @RestController
+@RequestMapping("/api/rest")
 public class RestfulController {
 
     @Autowired private ISchedualRestService iSchedualRestService ;
+
     @GetMapping(value = "/getMessage")
-    public String getMessage(@RequestParam String name){
-        return iSchedualRestService.sayHi(name) ;
+    public String getMessage(){
+        return iSchedualRestService.info() ;
     }
 }

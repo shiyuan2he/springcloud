@@ -20,12 +20,12 @@ public class RestfulServiceImpl {
 
     @Autowired private RestTemplate restTemplate ;
 
-    @HystrixCommand(fallbackMethod = "hiError")
-    public String getRestData(String name){
+    @HystrixCommand(fallbackMethod = "serviceFallback")
+    public String getRestData(){
         return restTemplate.getForObject("http://springcloud-producer-rest/api/rest/info",String.class) ;
     }
 
-    public String hiError(String name) {
-        return "hi,"+name+",sorry,error!";
+    public String serviceFallback() {
+        return "hi,sorry,error!";
     }
 }

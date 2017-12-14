@@ -14,10 +14,10 @@
         <module>springcloud-producer-rest</module>
         <module>springcloud-consumer-ribbon</module>
         <module>springcloud-consumer-feign</module>
+        <module>springcloud-server-config</module>
+        <module>springcloud-service-config</module>
+        <module>springcloud-repo-config</module>
         <module>springcloud-service-zuul</module>
-        <module>springcloud-config-server</module>
-        <module>springcloud-config-client</module>
-        <module>springcloud-config-repo</module>
         <module>springcloud-zipkin-server</module>
         <module>springcloud-service-data</module>
     </modules>

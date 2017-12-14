@@ -1,0 +1,18 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: springcloud-service-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8080/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: springcloud-consumer-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: springcloud-consumer-feign

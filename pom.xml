@@ -17,9 +17,9 @@
         <module>springcloud-server-config</module>
         <module>springcloud-service-config</module>
         <module>springcloud-repo-config</module>
-        <module>springcloud-service-zuul</module>
-        <module>springcloud-zipkin-server</module>
-        <module>springcloud-service-data</module>
+        <module>springcloud-server-api-gateway</module>
+        <module>springcloud-server-zipkin</module>
+        <module>springcloud-producer-data</module>
     </modules>
 
     <groupId>com.hsy.springcloud</groupId>

@@ -1,7 +1,0 @@
-server:
-  port: 8005
-spring:
-  application:
-    name: springcloud-service-data
-  zipkin:
-    base-url: http://localhost:8003

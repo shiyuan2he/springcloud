@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(value = "springcloud-producer-rest",fallback = SchedualRestServiceHystrix.class)
 public interface ISchedualRestService {
+
     @GetMapping("/api/rest/info")
     String info() ;
 }

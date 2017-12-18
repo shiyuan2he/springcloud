@@ -20,6 +20,8 @@
         <module>springcloud-server-api-gateway</module>
         <module>springcloud-server-zipkin</module>
         <module>springcloud-producer-data</module>
+        <module>springcloud-hystrix-dashboard</module>
+        <module>springcloud-hystirx-dashboard</module>
     </modules>
 
     <groupId>com.hsy.springcloud</groupId>
@@ -28,7 +30,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <version.springcloud>1.4.0.RELEASE</version.springcloud>
+        <version.springcloud>Edgware.RELEASE</version.springcloud>
         <version.springcloud.bus.amqp>1.3.2.RELEASE</version.springcloud.bus.amqp>
         <version.zipkin>2.4.0</version.zipkin>
         <version.springcloud.zipkin>1.3.0.RELEASE</version.springcloud.zipkin>
@@ -39,7 +41,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Edgware.RELEASE</version>
+                <version>${version.springcloud}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

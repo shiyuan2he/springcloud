@@ -1,9 +1,8 @@
-package com.hsy.springcloud.consumer.ribbon;
+package com.hsy.springcloud.hystirx.dashboard;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
-import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 /**
  * @author heshiyuan
@@ -15,11 +14,12 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
  * @price ¥5    微信：hewei1109
  */
 @SpringCloudApplication
-public class SpringCloudConsumerRibbonApplication {
+@EnableHystrixDashboard
+public class SpringCloudHystrixDashboardApplication {
+
     public static void main(String[] args) {
-        new SpringApplicationBuilder(SpringCloudConsumerRibbonApplication.class)
+        new SpringApplicationBuilder(SpringCloudHystrixDashboardApplication.class)
                 .web(true)
-                .run(args)
-                ;
+                .run(args) ;
     }
 }

@@ -20,6 +20,11 @@ public class RestfulServiceImpl {
 
     @Autowired private RestTemplate restTemplate ;
 
+    /**
+     * 定义服务降级逻辑(serviceFallback)
+     * 并且自动的实现了线程调用得依赖隔离
+     * @return
+     */
     @HystrixCommand(fallbackMethod = "serviceFallback")
     public String getRestData(){
         return restTemplate.getForObject("http://springcloud-producer-rest/api/rest/info",String.class) ;

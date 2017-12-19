@@ -1,10 +1,9 @@
-package com.hsy.springcloud.consumer.ribbon.web;
+package com.hsy.springcloud.hystirx.dashboard.web;
 
-import com.hsy.springcloud.consumer.ribbon.service.RestfulServiceImpl;
+import com.hsy.springcloud.hystirx.dashboard.service.RestfulServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -28,8 +27,8 @@ public class RestfulController {
     @Value("${spring.application.name}")
     String name ;
 
-    @RequestMapping("/getMessage")
-    public String getMessage(){
+    @RequestMapping("/home")
+    public String home(){
         return "I am info from port("+port+") from application name("+name+") invoke other service." + "\n"
                 +restfulService.getRestData();
     }

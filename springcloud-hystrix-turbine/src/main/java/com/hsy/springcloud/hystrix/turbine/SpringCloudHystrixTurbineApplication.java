@@ -1,9 +1,9 @@
-package com.hsy.springcloud.server.api.gateway;
+package com.hsy.springcloud.hystrix.turbine;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 /**
  * @author heshiyuan
@@ -16,10 +16,10 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  * @price ¥5    微信：hewei1109
  */
 @SpringBootApplication
-@EnableZuulProxy
-@EnableEurekaClient
-public class SpringCloudServiceZuulApplication {
+@EnableDiscoveryClient
+@EnableTurbine
+public class SpringCloudHystrixTurbineApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudServiceZuulApplication.class,args);
+        new SpringApplicationBuilder(SpringCloudHystrixTurbineApplication.class).web(true).run(args);
     }
 }

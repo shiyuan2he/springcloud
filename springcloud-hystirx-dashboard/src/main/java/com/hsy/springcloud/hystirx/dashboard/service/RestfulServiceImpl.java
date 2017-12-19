@@ -1,4 +1,4 @@
-package com.hsy.springcloud.consumer.ribbon.service;
+package com.hsy.springcloud.hystirx.dashboard.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.cache.annotation.CacheRemove;
@@ -30,17 +30,10 @@ public class RestfulServiceImpl {
      *
      * Hystrix会将请求结果放入缓存，默认缓存key既是请求参数
      */
-    //@CacheResult(cacheKeyMethod = "restData") // 设置请求缓存
     @HystrixCommand(fallbackMethod = "serviceFallback")
     public String getRestData(){
         return restTemplate.getForObject("http://springcloud-producer-rest/api/rest/info",String.class) ;
     }
-
-    /*@CacheRemove(commandKey = "restData") // 设置请求缓存
-    @HystrixCommand
-    public String removeCache(){
-        return restTemplate.getForObject("http://springcloud-producer-rest/api/rest/info",String.class) ;
-    }*/
 
     public String serviceFallback() {
         return "hi,sorry,error!";

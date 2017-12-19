@@ -1,9 +1,8 @@
 package com.hsy.springcloud.consumer.ribbon;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
-import org.springframework.cloud.netflix.turbine.EnableTurbine;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author heshiyuan
@@ -14,7 +13,8 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
  * Copyright (c) 2017 shiyuan4work@sina.com All rights reserved.
  * @price ¥5    微信：hewei1109
  */
-@SpringCloudApplication
+@EnableDiscoveryClient // 注册为Eureka服务客户端，以获得服务发现与注册的能力
+@SpringBootApplication
 public class SpringCloudConsumerRibbonApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(SpringCloudConsumerRibbonApplication.class)

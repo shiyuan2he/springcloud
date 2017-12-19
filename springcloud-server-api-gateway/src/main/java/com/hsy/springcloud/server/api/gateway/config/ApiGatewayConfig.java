@@ -1,9 +1,8 @@
-package com.hsy.springcloud.consumer.ribbon.config;
+package com.hsy.springcloud.server.api.gateway.config;
 
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import com.hsy.springcloud.server.api.gateway.filter.AccessFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * @author heshiyuan
@@ -16,11 +15,10 @@ import org.springframework.web.client.RestTemplate;
  * @price ¥5    微信：hewei1109
  */
 @Configuration
-public class BeanConfig {
+public class ApiGatewayConfig {
 
     @Bean
-    @LoadBalanced  // 开启服务端负载均衡
-    RestTemplate restTemplate(){
-        return new RestTemplate();
+    public AccessFilter accessFilter(){
+        return new AccessFilter();
     }
 }

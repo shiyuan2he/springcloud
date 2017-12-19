@@ -1,6 +1,5 @@
 package com.hsy.springcloud.consumer.feign;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -16,9 +15,9 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  * Copyright (c) 2017 shiyuan4work@sina.com All rights reserved.
  * @price ¥5    微信：hewei1109
  */
-@SpringBootApplication
-@EnableDiscoveryClient
 @EnableFeignClients
+@EnableDiscoveryClient
+@SpringBootApplication
 public class SpringCloudConsumerFeignApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(SpringCloudConsumerFeignApplication.class)

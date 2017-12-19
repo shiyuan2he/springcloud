@@ -4,6 +4,7 @@ server:
 eureka:
   instance:
     hostname: peer2
+    instance-id: ${spring.application.name}:${random.int} # 相同服务不同实例
   client:
     serviceUrl:
       defaultZone: http://peer1:8080/eureka/

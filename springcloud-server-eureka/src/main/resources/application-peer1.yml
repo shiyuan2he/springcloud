@@ -4,10 +4,13 @@ server:
 eureka:
   instance:
     hostname: peer1
+    instance-id: ${spring.application.name}:${random.int} # 相同服务不同实例
+    #prefer-ip-address: true  # 如果不想用peer1这样的主机名称命名服务，也可以 解注释 prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://peer2:8090/eureka/
 spring:
   application:
     name: springcloud-eureka-server
+
 

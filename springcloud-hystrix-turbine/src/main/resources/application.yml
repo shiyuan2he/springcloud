@@ -1,0 +1,19 @@
+server:
+  port: 8006
+management:
+  port: 8007
+spring:
+  application:
+    name: springcloud-hystrix-turbine
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8080/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+turbine:
+  app-config: springcloud-hystrix-dashboard # 指定了需要收集监控信息的服务名
+  cluster-name-expression: new String('default')  # 指定集群名称
+  combine-host-port: true # 设置为true，可以让同一主机上的服务通过主机名与端口号的组合来进行区分，

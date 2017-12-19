@@ -7,3 +7,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://peer1:8080/eureka/
+  instance:
+      lease-renewal-interval-in-seconds: 45 # 用于定义服务续约任务的调用间隔时间，默认30秒
+      lease-expiration-duration-in-seconds: 90  # 用于定义服务失效的时间 ，默认90秒

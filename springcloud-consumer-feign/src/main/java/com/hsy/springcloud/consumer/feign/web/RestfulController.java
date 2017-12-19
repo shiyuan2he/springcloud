@@ -25,6 +25,6 @@ public class RestfulController {
 
     @GetMapping(value = "/getMessage")
     public String getMessage(){
-        return iSchedualRestService.info() ;
+        return iSchedualRestService.infos() ;
     }
 }

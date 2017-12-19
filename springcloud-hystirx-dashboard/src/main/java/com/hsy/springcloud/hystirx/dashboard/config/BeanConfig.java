@@ -1,4 +1,4 @@
-package com.hsy.springcloud.consumer.ribbon.config;
+package com.hsy.springcloud.hystirx.dashboard.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

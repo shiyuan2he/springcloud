@@ -1,7 +1,10 @@
 package com.hsy.springcloud.hystirx.dashboard;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
@@ -13,8 +16,10 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
  * Copyright (c) 2017 shiyuan4work@sina.com All rights reserved.
  * @price ¥5    微信：hewei1109
  */
-@SpringCloudApplication
+@SpringBootApplication
+@EnableDiscoveryClient
 @EnableHystrixDashboard
+@EnableCircuitBreaker // 开启断路器功能
 public class SpringCloudHystrixDashboardApplication {
 
     public static void main(String[] args) {

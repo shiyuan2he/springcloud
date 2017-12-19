@@ -20,8 +20,8 @@
         <module>springcloud-server-api-gateway</module>
         <module>springcloud-server-zipkin</module>
         <module>springcloud-producer-data</module>
-        <module>springcloud-hystrix-dashboard</module>
         <module>springcloud-hystirx-dashboard</module>
+        <module>springcloud-hystrix-turbine</module>
     </modules>
 
     <groupId>com.hsy.springcloud</groupId>

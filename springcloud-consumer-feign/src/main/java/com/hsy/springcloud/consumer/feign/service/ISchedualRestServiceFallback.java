@@ -1,6 +1,6 @@
 package com.hsy.springcloud.consumer.feign.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * @author heshiyuan
@@ -12,10 +12,11 @@ import org.springframework.stereotype.Service;
  * Copyright (c) 2017 shiyuan4work@sina.com All rights reserved.
  * @price ¥5    微信：hewei1109
  */
-@Service
-public class SchedualRestServiceHystrix{
+@Component
+public class ISchedualRestServiceFallback implements ISchedualRestService{
 
-    public String info() {
+    @Override
+    public String infos() {
         return "error,this is Hystrix return";
     }
 }

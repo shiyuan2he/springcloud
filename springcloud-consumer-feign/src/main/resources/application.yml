@@ -8,3 +8,7 @@ eureka:
     service-url:
       defaultZone: http://peer1:8080/eureka/
 
+feign:
+  hystrix:
+    enabled: true
+

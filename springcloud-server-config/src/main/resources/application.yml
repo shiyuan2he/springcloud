@@ -1,6 +1,8 @@
 server:
   port: 8001
-
+management:
+  security:
+    enabled: false
 spring:
   application:
     name: springcloud-server-config
@@ -12,8 +14,13 @@ spring:
           search-paths: springcloud-repo-config
           username:
           password:
+          force-pull: true
       label: master
-
+  rabbitmq:
+    host: 192.168.175.128
+    port: 5672
+    username: admin
+    password: admin
 eureka:
   client:
     service-url:

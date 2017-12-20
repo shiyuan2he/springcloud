@@ -5,8 +5,6 @@ spring:
 eureka:
   server:
     enable-self-preservation: false # 由于很容易出发eureka server自我保护机制，使得注册中心的服务不能够正常下线，关闭自我保护机制，以确保注册中心可以将不可用的服务正确剔除
-  client:
-    register-with-eureka: true
   instance:
     leaseRenewalIntervalInSeconds: 45 # 用于定义服务续约任务的调用间隔时间，默认30秒
     leaseExpirationDurationInSeconds: 90  # 用于定义服务失效的时间 ，默认90秒
@@ -17,7 +15,7 @@ eureka:
 #  instance:
 #    hostname: localhost
 #  client:
-#    registerWithEureka: false //由于该应用为注册中心，所以设置为false，代表不像注册中心注册自己
-#    fetchRegistry: false //由于注册中心的作用就是维护服务实例，他并不需要去检索服务，所以设置为false
+#    registerWithEureka: false #由于该应用为注册中心，所以设置为false，代表不像注册中心注册自己
+#    fetchRegistry: false # 由于注册中心的作用就是维护服务实例，他并不需要去检索服务，所以设置为false
 #    serviceUrl:
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

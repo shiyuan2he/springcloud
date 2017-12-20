@@ -22,6 +22,7 @@
         <module>springcloud-producer-data</module>
         <module>springcloud-hystirx-dashboard</module>
         <module>springcloud-hystrix-turbine</module>
+        <module>springcloud-server-bus-rabbitmq</module>
     </modules>
 
     <groupId>com.hsy.springcloud</groupId>

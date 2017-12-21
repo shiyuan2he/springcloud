@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: peer1
+    active: peer2
 
 eureka:
   server:

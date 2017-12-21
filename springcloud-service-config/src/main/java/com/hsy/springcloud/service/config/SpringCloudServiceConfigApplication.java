@@ -2,6 +2,7 @@ package com.hsy.springcloud.service.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author heshiyuan
@@ -14,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @price ¥5    微信：hewei1109
  */
 @SpringBootApplication
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 public class SpringCloudServiceConfigApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringCloudServiceConfigApplication.class,args) ;

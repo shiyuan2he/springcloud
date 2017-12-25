@@ -45,5 +45,5 @@ java -jar target/springcloud-eureka-server-1.0-SNAPSHOT.jar --spring.profiles.ac
 
 http://peer1:8080
 
-![image](https://github.com/shiyuan2he/springcloud/tree/master/springcloud-repo-doc/images/enreka server.png)
+![image](https://github.com/shiyuan2he/springcloud/tree/master/springcloud-repo-doc/images/enrekaServer.png)
 

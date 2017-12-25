@@ -23,6 +23,7 @@
         <module>springcloud-hystirx-dashboard</module>
         <module>springcloud-hystrix-turbine</module>
         <module>springcloud-server-bus-rabbitmq</module>
+        <module>springcloud-repo-doc</module>
     </modules>
 
     <groupId>com.hsy.springcloud</groupId>

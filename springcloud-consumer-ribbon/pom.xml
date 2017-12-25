@@ -25,6 +25,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
         <!-- 服务监控面板 -->
         <!--<dependency>
             <groupId>org.springframework.boot</groupId>

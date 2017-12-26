@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
  * Copyright (c) 2017 shiyuan4work@sina.com All rights reserved.
  * @price ¥5    微信：hewei1109
  */
-//configuration = HystrixConfig.class,
 @FeignClient(name = "springcloud-producer-rest",
         fallback = ISchedualRestServiceFallback.class)
 public interface ISchedualRestService {

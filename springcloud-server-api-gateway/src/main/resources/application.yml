@@ -1,5 +1,5 @@
 server:
-  port: 8004
+  port: 10000
 spring:
   application:
     name: springcloud-server-api-gateway
@@ -9,10 +9,13 @@ eureka:
       defaultZone: http://peer1:8080/eureka/
 
 zuul:
+  ignoredPatterns: /**/admin/**
   routes:
-    api-a:
-      path: /api-a/**
-      serviceId: springcloud-consumer-ribbon
-    api-b:
-      path: /api-b/**
-      serviceId: springcloud-consumer-feign
+    host:
+      connectTimeoutMillis: 5000
+      socketTimeoutMillis: 15000
+    api-image:
+      path: /api/base/service/image/**
+      serviceId: base-service-image
+    #ribbon:
+    #  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule # 配置服务端负载均衡策略

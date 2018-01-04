@@ -1,6 +1,7 @@
 package com.hsy.springcloud.server.api.gateway.config;
 
 import com.hsy.springcloud.server.api.gateway.filter.AccessFilter;
+import com.hsy.springcloud.server.api.gateway.filter.ErrorFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,5 +21,10 @@ public class ApiGatewayConfig {
     @Bean
     public AccessFilter accessFilter(){
         return new AccessFilter();
+    }
+
+    @Bean
+    public ErrorFilter errorFilter(){
+        return new ErrorFilter();
     }
 }

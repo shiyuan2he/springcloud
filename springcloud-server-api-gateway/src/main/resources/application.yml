@@ -6,7 +6,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://peer1:8080/eureka/
+      defaultZone: http://discovery:8760/eureka/,http://discovery1:8761/eureka/,http://discovery2:8762/eureka/
 
 zuul:
   ignoredPatterns: /**/admin/**
@@ -19,3 +19,6 @@ zuul:
       serviceId: base-service-image
     #ribbon:
     #  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule # 配置服务端负载均衡策略
+
+logging:
+  config: classpath:log4j2.xml

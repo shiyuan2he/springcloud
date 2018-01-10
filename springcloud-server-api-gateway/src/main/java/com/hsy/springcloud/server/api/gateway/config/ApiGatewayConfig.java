@@ -23,8 +23,8 @@ public class ApiGatewayConfig {
         return new AccessFilter();
     }
 
-    @Bean
+    /*@Bean
     public ErrorFilter errorFilter(){
         return new ErrorFilter();
-    }
+    }*/
 }

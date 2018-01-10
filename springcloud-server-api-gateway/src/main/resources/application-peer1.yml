@@ -1,0 +1,23 @@
+server:
+  port: 10001
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: 123456
+    keyStoreType: PKCS12
+    keyAlias: tomcat
+spring:
+  application:
+    name: springcloud-server-api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery:8760/eureka/,http://discovery1:8761/eureka/,http://discovery2:8762/eureka/
+
+zuul:
+  routes:
+    api-image:
+      path: /image/**
+      serviceId: base-service-image
+    api-sso:
+      path: /sso/**
+      serviceId: sso-server

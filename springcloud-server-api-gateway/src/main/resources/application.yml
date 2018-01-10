@@ -1,24 +1,3 @@
-server:
-  port: 10000
 spring:
-  application:
-    name: springcloud-server-api-gateway
-eureka:
-  client:
-    service-url:
-      defaultZone: http://discovery:8760/eureka/,http://discovery1:8761/eureka/,http://discovery2:8762/eureka/
-
-zuul:
-  ignoredPatterns: /**/admin/**
-  routes:
-    host:
-      connectTimeoutMillis: 5000
-      socketTimeoutMillis: 15000
-    api-image:
-      path: /api/base/service/image/**
-      serviceId: base-service-image
-    #ribbon:
-    #  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule # 配置服务端负载均衡策略
-
-logging:
-  config: classpath:log4j2.xml
+  profiles:
+    active: peer1

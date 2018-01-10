@@ -1,13 +1,13 @@
 server:
-  port: 8090
+  port: 20000
 
 eureka:
   instance:
     hostname: peer2
-    instance-id: ${spring.application.name}:${random.int} # 相同服务不同实例
+    # instance-id: ${spring.application.name}:${random.int} # 相同服务不同实例
   client:
     serviceUrl:
-      defaultZone: http://peer1:8080/eureka/
+      defaultZone: http://peer1:10000/eureka/,http://peer2:20000/eureka/,http://peer3:30000/eureka/
 spring:
   application:
     name: springcloud-eureka-server

@@ -4,7 +4,7 @@
     <!-- 文件输出格式 -->
     <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:-} [%15.15t] %-40.40logger{39} : %m%n" />
     <property name="charsetEncoding" value="UTF-8" />
-    <!--<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>-->
+    <property name="logHome" value="./logs/api-gateway" />
 
     <!--控制台日志-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
@@ -15,36 +15,36 @@
     </appender>
 
     <appender name="dailyRollingFileAppenderDebug" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>./logs/api-gateway/debug.log</File>
+        <File>${logHome}/debug.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <FileNamePattern>./logs/api-gateway/debug.%d{yyyy-MM-dd_HH}.log</FileNamePattern>
+            <FileNamePattern>${logHome}/debug.%d{yyyy-MM-dd_HH}.log</FileNamePattern>
             <!-- keep 30 days' worth of history -->
-            <maxHistory>7</maxHistory>
+            <maxHistory>2</maxHistory>
         </rollingPolicy>
         <encoder>
             <Pattern>${pattern}</Pattern>
         </encoder>
     </appender>
     <appender name="dailyRollingFileAppenderInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>./logs/api-gateway/info.log</File>
+        <File>${logHome}/info.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <FileNamePattern>./logs/api-gateway/info.%d{yyyy-MM-dd_HH}.log</FileNamePattern>
+            <FileNamePattern>${logHome}/info.%d{yyyy-MM-dd_HH}.log</FileNamePattern>
             <!-- keep 30 days' worth of history -->
-            <maxHistory>7</maxHistory>
+            <maxHistory>2</maxHistory>
         </rollingPolicy>
         <encoder>
             <Pattern>${pattern}</Pattern>
         </encoder>
     </appender>
     <appender name="dailyRollingFileAppenderError" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>./logs/api-gateway/error.log</File>
+        <File>${logHome}/error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <FileNamePattern>./logs/api-gateway/error.%d{yyyy-MM-dd_HH}.log</FileNamePattern>
+            <FileNamePattern>${logHome}/error.%d{yyyy-MM-dd_HH}.log</FileNamePattern>
             <!-- keep 30 days' worth of history -->
-            <maxHistory>7</maxHistory>
+            <maxHistory>2</maxHistory>
         </rollingPolicy>
         <encoder>
             <Pattern>${pattern}</Pattern>

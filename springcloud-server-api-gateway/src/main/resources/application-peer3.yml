@@ -11,7 +11,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://discovery:8760/eureka/,http://discovery1:8761/eureka/,http://discovery2:8762/eureka/
+      defaultZone: http://peer1:10000/eureka/,http://peer2:20000/eureka/,http://peer3:30000/eureka/
+      #defaultZone: http://discovery:8760/eureka/,http://discovery1:8761/eureka/,http://discovery2:8762/eureka/
 
 zuul:
   routes:

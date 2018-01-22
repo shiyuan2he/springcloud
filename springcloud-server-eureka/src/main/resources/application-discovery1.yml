@@ -5,7 +5,7 @@ eureka:
   server:
       enable-self-preservation: false # 由于很容易出发eureka server自我保护机制，使得注册中心的服务不能够正常下线，关闭自我保护机制，以确保注册中心可以将不可用的服务正确剔除
   instance:
-    hostname: peer1
+    hostname: discovery1
     leaseRenewalIntervalInSeconds: 45 # 用于定义服务续约任务的调用间隔时间，默认30秒
     leaseExpirationDurationInSeconds: 90  # 用于定义服务失效的时间 ，默认90秒
     # instance-id: ${spring.application.name}:${random.int} # 相同服务不同实例

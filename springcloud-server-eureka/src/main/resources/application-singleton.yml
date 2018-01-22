@@ -9,3 +9,7 @@ eureka:
     fetchRegistry: false # 由于注册中心的作用就是维护服务实例，他并不需要去检索服务，所以设置为false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+logging:
+  file:
+
+

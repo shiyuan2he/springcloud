@@ -54,14 +54,11 @@
 
     <logger name="org.springframework.web" level="debug"/>
 
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="console"/>
         <appender-ref ref="dailyRollingFileAppenderDebug"/>
     </root>
 
-    <root level="info">
-        <appender-ref ref="dailyRollingFileAppenderInfo"/>
-    </root>
     <root level="error">
         <appender-ref ref="dailyRollingFileAppenderError"/>
     </root>

@@ -14,8 +14,8 @@
         <module>springcloud-producer-rest</module>
         <module>springcloud-consumer-ribbon</module>
         <module>springcloud-consumer-feign</module>
-        <module>springcloud-server-config</module>
-        <module>springcloud-service-config</module>
+        <module>springcloud-server-config-zkui</module>
+        <module>springcloud-server-config-git</module>
         <module>springcloud-repo-config</module>
         <module>springcloud-server-api-gateway</module>
         <module>springcloud-server-zipkin</module>
@@ -25,6 +25,7 @@
         <module>springcloud-server-bus-rabbitmq</module>
         <module>springcloud-repo-doc</module>
         <module>springcloud-server-admin</module>
+        <module>springcloud-server-config-zkui</module>
     </modules>
 
     <groupId>com.hsy.springcloud</groupId>

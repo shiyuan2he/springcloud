@@ -1,4 +1,8 @@
 .idea
+*.db
+*.DB
+*/*.db
+*/*.DB
 *.iml
 */*.iml
 */target/

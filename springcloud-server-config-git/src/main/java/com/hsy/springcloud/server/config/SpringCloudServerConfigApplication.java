@@ -9,7 +9,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @author heshiyuan
  * @description <p></p>
  * @path springboot.demo/com.hsy.springboot.demo.springboot.jdbc
- * @date ${data} ${time}
+ * @date 05/12/2017 22:27
  * @github http://github.com/shiyuan2he
  * @email shiyuan4work@sina.com
  * Copyright (c) 2017 shiyuan4work@sina.com All rights reserved.

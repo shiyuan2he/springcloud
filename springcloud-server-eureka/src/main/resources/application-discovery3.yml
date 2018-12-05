@@ -3,7 +3,7 @@ server:
 
 eureka:
   server:
-      enable-self-preservation: false # 由于很容易出发eureka server自我保护机制，使得注册中心的服务不能够正常下线，关闭自我保护机制，以确保注册中心可以将不可用的服务正确剔除
+    enable-self-preservation: false # 由于很容易出发eureka server自我保护机制，使得注册中心的服务不能够正常下线，关闭自我保护机制，以确保注册中心可以将不可用的服务正确剔除
   instance:
     hostname: discovery3
     leaseRenewalIntervalInSeconds: 45 # 用于定义服务续约任务的调用间隔时间，默认30秒
@@ -12,7 +12,7 @@ eureka:
     #prefer-ip-address: true  # 如果不想用peer1这样的主机名称命名服务，也可以 解注释 prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://peer1:10000/eureka/,http://peer2:20000/eureka/,http://peer3:30000/eureka/
+      defaultZone: http://discovery0:10000/eureka/,http://discovery1:20000/eureka/,http://discovery2:30000/eureka/
 spring:
   application:
     name: springcloud-eureka-server

@@ -1,0 +1,12 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: springcloud-producer-rest # 服务名称
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8090/eureka/  # 服务注册地址
+  instance:
+      lease-renewal-interval-in-seconds: 45 # 用于定义服务续约任务的调用间隔时间，默认30秒
+      lease-expiration-duration-in-seconds: 90  # 用于定义服务失效的时间 ，默认90秒

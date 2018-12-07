@@ -26,6 +26,7 @@
         <module>springcloud-repo-doc</module>
         <module>springcloud-server-admin</module>
         <module>springcloud-server-config-zkui</module>
+        <module>springcloud-consumer-config</module>
     </modules>
 
     <groupId>com.hsy.springcloud</groupId>
